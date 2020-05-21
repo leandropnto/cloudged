@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 final Color mainBlueColor = Color(0x567DF4).withOpacity(1);
+final String mainBlueColorString = "0x567DF4";
 const mainAccentColor = Color(0xFF22215B);
 
 const pastelColor = Color(0xFFFFFBEC);

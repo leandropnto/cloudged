@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 import '../../../common/constants/text_styles.dart';
 import '../../../common/extensions/context_extensions.dart';
@@ -65,8 +64,7 @@ class FolderHeaderView extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
-                        DateFormat('EEE, dd/MM/y', 'pt_BR')
-                            .format(folder.createdAt),
+                        folder.createdAtFormated,
                         style:
                             folderSubLabelStyle.copyWith(color: Colors.white),
                         overflow: TextOverflow.clip,

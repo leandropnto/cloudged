@@ -61,7 +61,6 @@ abstract class _FolderControllerBase with Store {
         name: nome,
         color: cor,
         type: tipo,
-        createdAt: DateTime.now(),
         icon: icon);
     try {
       await folders.addFolder(folder);

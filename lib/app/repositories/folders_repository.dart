@@ -3,6 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import '../models/file_model.dart';
 import '../models/folder.dart';
+import '../models/user.dart';
 import '../stores/auth_store.dart';
 
 class FolderRepository {
@@ -44,5 +45,9 @@ class FolderRepository {
     } on Exception catch (e) {
       Future.error(e);
     }
+  }
+
+  Future<DocumentReference> createUser(User user) async {
+    return await Firestore.instance.collection("users").add(user.toMap());
   }
 }

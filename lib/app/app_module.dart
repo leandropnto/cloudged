@@ -26,7 +26,6 @@ class AppModule extends MainModule {
         Router('/profile', module: ProfileModule()),
         Router('/foldernew', module: FolderModule()),
         Router('/folderdetail', module: FolderDetailModule()),
-
       ];
 
   @override

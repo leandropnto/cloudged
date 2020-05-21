@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'common/constants/colors.dart';
+import 'common/themes/app_light_theme.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -11,10 +11,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       navigatorKey: Modular.navigatorKey,
       title: 'Cloud GED',
-      theme: ThemeData(
-        primaryColor: mainBlueColor,
-
-      ),
+      theme: AppLightTheme.getTheme(),
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,
       localizationsDelegates: [

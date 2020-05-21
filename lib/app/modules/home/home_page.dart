@@ -18,13 +18,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends ModularState<HomePage, HomeController> {
   //use 'controller' variable to access controller
 
-
- @override
+  @override
   void initState() {
     super.initState();
     controller.load();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -65,8 +63,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                 SizedBox(
                   height: 10,
                 ),
-                Text(
-                    '''
+                Text('''
 Melhor plataforma de armazenamento na nuvem para empresas e pessoas que desejam administar seus dados.''',
                     maxLines: 5,
                     softWrap: true,
@@ -114,9 +111,10 @@ Melhor plataforma de armazenamento na nuvem para empresas e pessoas que desejam 
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     IconButton(
-                        color: Colors.red,
-                        icon: FaIcon(FontAwesomeIcons.google),
-                        onPressed: () {}),
+                      color: Colors.red,
+                      icon: FaIcon(FontAwesomeIcons.google),
+                      onPressed: controller.loginWithGoogle,
+                    ),
                     IconButton(
                         color: Colors.blue,
                         icon: FaIcon(FontAwesomeIcons.facebook),
